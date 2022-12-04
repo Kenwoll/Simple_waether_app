@@ -108,4 +108,9 @@ body {
 }
 .inputs input:hover {
   border: 2px solid rgb(98, 0, 238);
+}
+.inputs p {
+  text-align: center;
+  opacity: 0.6;
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */

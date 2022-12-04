@@ -145,9 +145,13 @@ corBtn.addEventListener('click', () => {
     lngInput.classList.add("Lng_input")
     lngInput.type = "text"
     lngInput.placeholder = "Lng"
+
+    const p = document.createElement("p")
+    p.innerHTML = "press enter to search"
     
     divInput.appendChild(latInput)
     divInput.appendChild(lngInput)
+    divInput.appendChild(p)
     body.appendChild(divInput)
 })
 
@@ -165,7 +169,11 @@ cityBtn.addEventListener('click', () => {
     cityInput.type = "text"
     cityInput.placeholder = "City name"
 
+    const p = document.createElement("p")
+    p.innerHTML = "press enter to search"
+
     divInput.appendChild(cityInput)
+    divInput.appendChild(p)
     body.appendChild(divInput)
 })
 
