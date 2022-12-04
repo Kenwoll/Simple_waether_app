@@ -19,7 +19,7 @@ function getPositionSuccess(pos) {
     var geoAcc = pos.coords.accuracy.toFixed(1);
 
     let url = getApiUrl(geoLat, geoLng)
-    fn_getWeatherByLL(url)
+    getWeather(url)
 }
 
 function getPositionErr(err) {
@@ -38,7 +38,7 @@ function getPositionErr(err) {
         }
 }
 
-function fn_getWeatherByLL(url){
+function getWeather(url){
     //API call
     //var URLRequest = 'https://api.openweathermap.org/data/2.5/weather?lat='+ String(geoLat) +'&lon='+ String(geoLng) +'&appid=ced9d0aa8fa67d44b536a557457f9091'
     var URLRequest = url
@@ -190,7 +190,7 @@ document.addEventListener('keydown', (event) => {
             if (lat == '' && lng == '') alert("Please enter values!")
 
             let url = getApiUrl(lat, lng)
-            fn_getWeatherByLL(url)
+            getWeather(url)
         } 
 
         if(cityInput) {
@@ -199,7 +199,7 @@ document.addEventListener('keydown', (event) => {
             if (cityName == '') alert("Please enter values!")
             
             let url = getApiUrl(cityName)
-            fn_getWeatherByLL(url) 
+            getWeather(url) 
         }
     }
 })
